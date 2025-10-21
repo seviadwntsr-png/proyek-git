@@ -1,37 +1,25 @@
 #include <iostream>
-#include <string>
 using namespace std;
-
-int i;
-struct siswa {
-    string nama, nisn, kelas;
+struct nilai{
+    float Mtk;
+    float BIn;
+    float Big;
+    float IPA;
 };
-void datas(siswa data[], int jumlah) {
-    for (int i=0; i<jumlah; i++) {
-    cout << "NISN: ";
-    getline(cin, data[i].nisn);
-    cout << "Nama: ";
-    getline(cin, data[i].nama);
-    cout << "Kelas: ";
-    getline(cin, data[i].kelas);
-    }
-}
-void tampil(siswa data[], int jumlah) {
-    for (int i=0; i<jumlah; i++)
-    cout << "\nDATA SISWA\n";
-    cout << "NISN: " << data[i].nisn << endl;
-    cout << "Nama: " << data[i].nama << endl;
-    cout << "Kelas: "<< data[i].kelas << endl;
-}
-int main () {
-    int n, jumlah;
-    cout << "PROGRAM DATA SISWA";
-    cout << "\nJumlah siswa: ";
-    cin >> jumlah;
-    cin.ignore ();
-    siswa data[jumlah];
-    datas(data, jumlah);
-    tampil(data, jumlah);
+struct siswa{
+    string nama;
+    string NISN;
+    string jurusan;
+    nilai Nilai; // struct in struct
+};
+void tambahDataSiswa();//menambahkan data pada file siswa.txt
+void tampilDataSiswa();//membaca data dari file siswa.txt dan ditampilkan
+void cariSiswa();// berdasarkan NISN
+float nilaiAkhir();// nilai akhir = 40%matematika+30%IPA+20%B indonesia +20%B Inggris
+void ranking(); // menampilkan data siswa berdasarkan peringkatnya
 
+int main()
+{
+    
     return 0;
 }
