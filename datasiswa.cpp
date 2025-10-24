@@ -20,6 +20,7 @@ void ranking(); // menampilkan data siswa berdasarkan peringkatnya
 
 int main()
 {
-    
+    cout << "pita noob";
     return 0;
+
 }
